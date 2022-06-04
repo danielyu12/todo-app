@@ -1,0 +1,28 @@
+.create-task-button {
+  font-size: 30px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: 0px 0px 20px 0px;
+}
+
+.create-task-input {
+  font-size: 30px;
+  margin: 20px 20px;
+  border-radius: 10px;
+  width: 500px;
+  height: 70px;
+}
+
+.create-task-label {
+  font-size: 30px;
+  padding: 0;
+  margin: 0px;
+}
+
+h1 {
+  background-color: darkgray;
+  font-size: 50px;
+  padding-bottom: 10px;
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}

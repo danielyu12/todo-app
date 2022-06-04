@@ -1,0 +1,18 @@
+.individual-task {
+  background-color: firebrick;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  border-radius: 20px;
+  margin: 3px;
+  padding: 0px;
+}
+
+.task-item {
+  font-size: 30px;
+}
+
+p {
+  color: black;
+  font-size: large;
+}
