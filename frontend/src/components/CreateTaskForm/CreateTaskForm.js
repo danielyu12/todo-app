@@ -39,22 +39,20 @@ const CreateTaskForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <h1>Create a Task</h1>
-        <label className="create-task-label" htmlFor="create-task-input">
-          What do you need to do?
-        </label>
+    <div classname="create-task">
+      <h1 className="create-task-label">What do you need to do?</h1>
+      <form className="create-task-form" onSubmit={handleSubmit}>
         <input
           className="create-task-input"
           type="text"
           id="createTask"
           name="createTask"
+          autofocus="true"
           value={state.input}
           onChange={handleFieldChange}
           placeholder="Type here..."
         />
-        <input type="submit" value="Submit" className="create-task-button" />
+        <input type="submit" value="Submit" className="create-task-submit" />
       </form>
     </div>
   );

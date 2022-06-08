@@ -8,7 +8,7 @@ const Tasks = () => {
     axios
       .get('http://localhost:5000/update')
       .then((res) => {
-        setState({ taskList: res.data.todos });
+        setState({ taskList: res.data.todos.filter((word) => word !== '') });
       })
       .catch((err) => {
         console.log(err);
@@ -21,9 +21,11 @@ const Tasks = () => {
 
   return (
     <div className="items">
-      {state.taskList.map((task) => (
-        <Task task={task} />
-      ))}
+      {state.taskList.length === 0 ? (
+        <h1 className="no-tasks">No Tasks Yet</h1>
+      ) : (
+        state.taskList.map((task) => <Task task={task} />)
+      )}
     </div>
   );
 };

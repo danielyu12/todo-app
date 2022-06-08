@@ -2,20 +2,20 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
-const response = require('koa/lib/response');
 const fs = require('fs');
-
 const app = new Koa();
 const router = new Router();
 app.use(cors());
 app.use(bodyParser());
 
+//Posts should only be only create
 router.post('/update', (ctx) => {
   if (ctx.request.body.type === 'delete') {
     const contents = fs.readFileSync('test.txt', 'utf-8').split('\n');
     const index = contents.indexOf(ctx.request.body.message);
     contents.splice(index, 1);
-    fs.truncate('test.txt', 0, function () {});
+    fs.truncate('test.txt', 0, () => {});
+    console.log(contents);
     contents.forEach((element) => {
       fs.appendFile('test.txt', element + '\n', { flag: 'a+' }, (err) => {});
     });

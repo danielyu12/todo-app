@@ -3,3 +3,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.no-tasks {
+  text-align: center;
+}

@@ -19,7 +19,7 @@ const task = (props) => {
   };
   return (
     <>
-      {props.task == '' ? null : (
+      {props.task === '' ? null : (
         <div
           className="individual-task"
           onClick={handleRemove}
